@@ -333,6 +333,7 @@ BOOL doesAppRunInBackground(void);
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:dateFormat];
         [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
         [dictionary setObject:dateFormatter
                        forKey:key];
     }
